@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Subject = () => {
+    const {logo, name} = topic
     return (
         <div>
-            <h2>This is subject</h2>
+            <p>{logo}</p>
+            <p>{name}</p>
         </div>
     );
 };
