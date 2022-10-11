@@ -1,19 +1,20 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Topics from '../Topics/Topics';
-
+import images1 from './quizquiz1.jpg'
 
 const Home = () => {
     const topics = useLoaderData();
+   
+           
     return (
           <div className='container'>
-           <div className="card mb-3">
+           <div className="mb-3">
   <div className="row g-0">
     <div className="col-md-4">
-      <img src='' className="img-fluid rounded-start" alt="..."/>
+      <img src={images1} className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-8">
-      <div className="card-body">
+      <div className="card-body m-5 p-5">
         <h1 className="card-title">Welcome To My Quiz Website</h1>
         <p className="card-text">We've got all the quizzes you love to binge! ... This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. QUIZ ...</p>
       </div>
@@ -24,9 +25,9 @@ const Home = () => {
             topics.data.map(topic => <Topics
             key={topic.id}
             topic={topic}
-
             ></Topics>)
            }
+           
           </div>
          
       

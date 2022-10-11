@@ -23,15 +23,20 @@ const Statistics = () => {
 
     }, [])
     return (
-        <div className=''>
-        <h1>Chart</h1>
-        <BarChart width={550} height={540} data={quiz}>
+        <div>
+            <div className="">
+  <div className="card-body">
+    <h1 className="card-text">Chart</h1>
+    <BarChart  width={350} height={500} data={quiz}>
           <Bar dataKey="quantity" fill="#8884d8" />
           <XAxis dataKey="name"></XAxis>
           <YAxis/>
           <Tooltip></Tooltip>
         </BarChart>
-        </div>
+  </div>
+</div>
+        
+         </div>
     );
 };
 
