@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
-import ExtraQus from './components/ExtraQuestions/ExtraQus';
+import Blog from './components/Blog/Blog';
 import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
 import Topic from './components/Topic/Topic';
@@ -35,8 +35,8 @@ function App() {
             element: <Topic></Topic>
           },
           {
-            path: '/question',
-            element: <ExtraQus></ExtraQus>
+              path: '/blog',
+              element: <Blog></Blog>
           },
           {
             path: '/about',
