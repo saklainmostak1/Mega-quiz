@@ -7,7 +7,7 @@ import Toast from '../Toastify/Toast';
 const Subject = ({quiz}) => { 
     // console.log(quiz.options) 
     // console.log(quiz.correctAnswer) 
-    const {correctAnswer, question, options} = quiz
+    const {correctAnswer, question, options} = quiz;
     const correctAnsss = correctAnswer
         const correctAns = () =>{
             if(correctAns){
@@ -15,7 +15,7 @@ const Subject = ({quiz}) => {
                     
             }
         }
-        const showCorrectAns =(quiz) =>{
+        const showCorrectAns =() =>{
             // console.log(topic)
          
             }

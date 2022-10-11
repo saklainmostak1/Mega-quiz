@@ -8,13 +8,13 @@ const Home = () => {
            
     return (
           <div className='container'>
-           <div className="mb-3">
+           <div className="mb-3 card border-0">
   <div className="row g-0">
     <div className="col-md-4">
       <img src={images1} className="img-fluid rounded-start" alt="..."/>
     </div>
     <div className="col-md-8">
-      <div className="card-body m-5 p-5">
+      <div className="card-body">
         <h1 className="card-title">Welcome To My Quiz Website</h1>
         <p className="card-text">We've got all the quizzes you love to binge! ... This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. QUIZ ...</p>
       </div>

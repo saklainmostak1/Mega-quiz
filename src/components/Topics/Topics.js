@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 const Topics = ({topic}) => {
     
@@ -14,7 +14,7 @@ const Topics = ({topic}) => {
       <img src={logo} className="card-img-top bg-success" alt="..."/>
       <div className="card-body  d-flex justify-content-between">
         <h5 className="card-title">{name}</h5>
-        <Link to={`/quiz/${id}`} ><button className='btn btn-primary'>Start Practice</button></Link>
+        <Link to={`/quiz/${id}`} ><button className='btn btn-primary d-flex'>Start Practice  <ArrowRightIcon className=" text-black "/></button></Link>
       </div>
     </div>
   </div>
