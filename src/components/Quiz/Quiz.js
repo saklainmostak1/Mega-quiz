@@ -7,7 +7,7 @@ const Quiz = () => {
     console.log(quizs.data)
     return (
         <div>
-            <h1>{quizs.data.name} </h1>
+            <h1>Quiz Of  {quizs.data.name} </h1>
            {
              quizs.data.questions.map(quiz => 
                <Subject
