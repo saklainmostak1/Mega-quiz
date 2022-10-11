@@ -4,7 +4,7 @@ import About from './components/About/About';
 import ExtraQus from './components/ExtraQuestions/ExtraQus';
 import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
-import Statistics from './components/Statistics/Statistics';
+import Topic from './components/Topic/Topic';
 import Main from './layout/Main';
 
 function App() {
@@ -28,8 +28,11 @@ function App() {
             element: <Quiz></Quiz>
           },
           {
-            path: '/statistics',
-            element: <Statistics></Statistics>
+            path: '/topic',
+            loader: () =>{
+              return fetch('https://openapi.programming-hero.com/api/quiz')
+            },
+            element: <Topic></Topic>
           },
           {
             path: '/question',
