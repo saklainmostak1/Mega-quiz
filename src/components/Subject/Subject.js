@@ -1,31 +1,34 @@
 import React from 'react';
+import Toast from '../Toast/Toast';
 import './Subject.css'
 
 const Subject = ({quiz}) => {
-    const {correctAnswer} = quiz
-    
+    const {correctAnswer, question, options} = quiz
+    const correct = correctAnswer;
     const correctAns =() =>{
-        if(correctAnswer ){
-
-            alert('correct ans')
+        if(correct === correctAnswer){
+         alert('correct')
+        }
+        else{
+            alert('wrong')
         }
     }
     return (
-        <div className='container'>
-            <p>{quiz.correctAnswer}</p>
-          <div className='bg-light text-primary shadow-lg p-5'>
-            <h5>Question: {quiz.question} </h5>
-            <div className='d-flex justify-content-center'>
+        <div className='container p-3'>
+            {/* <p>{correctAnswer}</p> */}
+          <div className='bg-light rounded text-primary shadow-lg p-5'>
+            <h5>Question: {question} </h5>
+            <div className='d-flex justify-content-center p-5'>
                 <div>
-                    <p><input  onClick={correctAns} type="radio"/> {quiz.options[0]}</p>
-                    <p><input  onClick={correctAns} type="radio"/> {quiz.options[1]}</p>
+                    <p><input onClick={correctAns} type="radio"/> {options[0]}</p>
+                    <p><input  onClick={correctAns} type="radio"/> {options[1]}</p>
                 </div>
                 <div className='px-5'>
-                    <p><input  onClick={correctAns} type="radio"/> {quiz.options[2]}</p>
-                    <p><input  onClick={correctAns} type="radio"/> {quiz.options[3]}</p>
+                    <p><input  onClick={correctAns} type="radio"/> {options[2]}</p>
+                    <p><input  onClick={correctAns} type="radio"/> {options[3]}</p>
                 </div>
             </div> 
-
+<Toast></Toast>
         </div>
         </div>
     );
