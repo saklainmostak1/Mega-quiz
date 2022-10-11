@@ -1,11 +1,13 @@
 import React from 'react';
+import './Subject.css'
 
-const Subject = () => {
-    const {logo, name} = topic
+const Subject = ({quiz}) => {
+    const {} = quiz
     return (
         <div>
-            <p>{logo}</p>
-            <p>{name}</p>
+            <p>Fast: {quiz.question} </p>
+            <p>  {quiz.options} </p>
+            <p>{quiz.correctAnswer}</p>
         </div>
     );
 };

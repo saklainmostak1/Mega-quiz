@@ -5,7 +5,6 @@ import Topics from '../Topics/Topics';
 
 const Home = () => {
     const topics = useLoaderData();
-    console.log(topics)
     return (
           <div>
            <div class="card mb-3">
