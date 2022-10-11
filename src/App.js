@@ -38,6 +38,10 @@ function App() {
           {
             path: '/about',
             element: <About></About>
+          },
+          {
+            path: '*',
+            element: <div> This Page Is Not Found 404 !!!!! </div>
           }
          ]
       }

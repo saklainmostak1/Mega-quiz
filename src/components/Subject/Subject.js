@@ -1,55 +1,39 @@
 import React from 'react';
-import Toast from '../Toast/Toast';
 import './Subject.css'
+import { EyeIcon } from '@heroicons/react/24/solid'
+
 
 const Subject = ({quiz}) => {
+     
     const {correctAnswer, question, options} = quiz
-    const correctAns = (options) =>{
-        const correct = options.find(ops => ops.correctAns = options.correctAns )
-        if(correct){
-            alert('correct ans')
+    const correctAnsss = correctAnswer
+        const correctAns = () =>{
+            if(correctAns){
+                    alert(correctAnsss)
+            }
         }
-   }
-    let messege;
-    if(options[0] === correctAnswer){
-        messege = <p>correct ans</p>
-    }
-    else if(options[1] === correctAnswer){
-        messege = <p>correct ans</p>
-    }
-    else if(options[2] === correctAnswer){
-        messege = <p>correct ans</p>
-    }
-    else if(options[3] === correctAnswer){
-        messege = <p>correct ans</p>
-    }
-    else{
-        messege = <p>Wrong ans</p>
-    }
-   
     return (
-        
         <div className='container p-3'>
-                 {
-                        messege
-           }
-          
-            {/* <p>{correctAnswer}</p> */}
+            
           <div className='bg-light rounded text-primary shadow-lg p-5'>
+            <div className='d-flex '>
             <h5>Question: {question} </h5>
-            <div className='d-flex justify-content-center p-5'>
-                <div>
+            <button onClick={correctAns} className='bg-light border border-0'><EyeIcon className="h-6 w-6  w-25 h-25"/></button>
+            </div>
            
-                    <p><input   onClick={() => correctAns(quiz)} type="radio"/> {options[0]}</p>
-                    <p><input  onClick={() => correctAns(quiz)} type="radio"/> {options[1]}</p>
+            <div className='btn d-flex justify-content-center'>
+                <div className=''>
+                    <p><button className='btn btn-primary text-dark'  >{options[0]}</button></p>
+                    <p><button  className='btn btn-primary text-dark'>{options[1]}</button></p>
                 </div>
                 <div className='px-5'>
-                    <p><input  onClick={() => correctAns(quiz)} type="radio"/> {options[2]}</p>
-                    <p><input  onClick={() => correctAns(quiz)} type="radio"/> {options[3]}</p>
-                   
+                <p><button  className='btn btn-primary text-dark' >{options[2]}</button></p>
+                <p><button  className='btn btn-primary text-dark'>{options[3]}</button></p>
+               
+              
                 </div>
             </div> 
-<Toast></Toast>
+
         </div>
         </div>
     );
