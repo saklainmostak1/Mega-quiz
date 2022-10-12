@@ -50,7 +50,7 @@ const Subject = ({quiz}) => {
        <div className="card shadow-lg text-center m-5">
            <div className="card-body">
                 <div className='d-flex justify-content-between'>
-                    <h5 className="card-title"> {question} </h5>
+                    <h5 className="card-title"> Question::  {question} </h5>
                      <p onClick={correctAns} className='bg-white border border-0'><EyeIcon className="h-6 w-6  w-25 h-25"/></p>
         </div>
         

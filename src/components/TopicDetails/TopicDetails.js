@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const TopicDetails = ({topic}) => {
     const {logo, name, id, total} = topic
     return (
-        <div>
-            <div className='container'>
+        <div className='bg-info'>
+            <div className='container '>
         <div className=" m-5  row row-cols-1 row-cols-md-2 g-4">
   <div className="col">
     <div className="card shadow-lg p-3 ">

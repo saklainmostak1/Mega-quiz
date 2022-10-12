@@ -28,7 +28,7 @@ const Blog = () => {
             <section>
             <section className='container'>
             <div className="card m-5">
-  <h2 className="card-header">what is Useref and how it works???</h2>
+  <h2 className="card-header">What is Useref and how it works???</h2>
   <div className="card-body">
     <h5 className="card-title text-decoration-underline"><strong>Useref and how it works:</strong></h5>
     <p className="card-text"> 

@@ -7,7 +7,7 @@ const Home = () => {
    
            
     return (
-          <div className='container'>
+          <div className='container bg-info'>
            <div className="mb-3 card  border-0">
   <div className="row g-0">
     <div className="col-md-4">
