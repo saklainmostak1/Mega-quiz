@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
+
 const TopicDetails = ({topic}) => {
     const {logo, name, id, total} = topic
     return (
