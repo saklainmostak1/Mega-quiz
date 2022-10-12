@@ -3,7 +3,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Toast = () => {
-    // console.log(ans.data.questions)
     const notify = () => toast("correct ans");
     return (
         <div>
