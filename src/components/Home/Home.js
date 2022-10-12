@@ -8,7 +8,7 @@ const Home = () => {
            
     return (
           <div className='container'>
-           <div className="mb-3 card border-0">
+           <div className="mb-3 card  border-0">
   <div className="row g-0">
     <div className="col-md-4">
       <img src={images1} className="img-fluid rounded-start" alt="..."/>

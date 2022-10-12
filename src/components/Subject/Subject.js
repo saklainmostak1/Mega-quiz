@@ -43,12 +43,11 @@ const Subject = ({quiz}) => {
        
         
     return (  
-        <div>
-            <div className='container'>
+        <div >
+            <div>
              <Toast></Toast>
-
             </div>
-       <div className="card shadow-lg text-center container m-5">
+       <div className="card shadow-lg text-center m-5">
            <div className="card-body">
                 <div className='d-flex justify-content-between'>
                     <h5 className="card-title"> {question} </h5>
