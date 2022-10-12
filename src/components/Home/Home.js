@@ -4,7 +4,6 @@ import images1 from './quizquiz1.jpg'
 
 const Home = () => {
     const topics = useLoaderData();
-   
            
     return (
           <div className='container bg-info'>
