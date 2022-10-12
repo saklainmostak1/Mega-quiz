@@ -4,7 +4,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 const Topics = ({topic}) => {
     
-    const {logo, name, id} = topic
+    const {logo, name, id, total} = topic
     return (
         
        <div className='container'>
@@ -12,8 +12,10 @@ const Topics = ({topic}) => {
   <div className="col">
     <div className="card shadow-lg p-3 ">
       <img src={logo} className="card-img-top bg-success" alt="..."/>
+      <p>Total Qus: {total} </p>
       <div className="card-body  d-flex justify-content-between">
         <h5 className="card-title">{name}</h5>
+        
         <Link to={`/quiz/${id}`} ><button className='btn btn-primary d-flex'>Start Practice  <ArrowRightIcon className=" text-black "/></button></Link>
       </div>
     </div>
