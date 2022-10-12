@@ -4,8 +4,6 @@ import Subject from '../Subject/Subject';
 const Quiz = () => {
     const quizs = useLoaderData()
     // console.log(quizs.data)
-   
-   
     return (
         <div>
             

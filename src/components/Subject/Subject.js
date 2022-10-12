@@ -1,31 +1,41 @@
 import './Subject.css'
 import { EyeIcon } from '@heroicons/react/24/solid'
 import Toast from '../Toastify/Toast';
+import { toast } from 'react-toastify';
 
 const Subject = ({quiz}) => { 
     // console.log(quiz.options) 
     const {correctAnswer, question, options} = quiz;
-    console.log(correctAnswer) 
+    // console.log(correctAnswer) 
     const correctAnsss = correctAnswer
         const correctAns = () =>{
             if(correctAns){
-                    alert(correctAnsss)
+                    // alert(correctAnsss)
+                    toast.success(correctAnsss,{
+                        position: toast.POSITION.TOP_CENTER,
+                        autoClose: 2000
+                    })
                     
             }
         }
-        const showCorrectAns = (correctAnswer) =>{
+        const showCorrectAns = (options) =>{
             // console.log(quiz.correctAnswer)
             // console.log(quiz.options[1])
             // console.log(quiz.id)
             // console.log(quiz)
             // console.log(quiz.options[1])
-            if(correctAnswer === true){
-                alert('correct')
+            if(options === correctAnswer){
+                toast.success('correct ans',{
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose: 2000
+                });
             }
             else{
-                alert('wrong')
+                toast.warning('wrong ans',{
+                    position: toast.POSITION.TOP_CENTER,
+                    autoClose: 2000
+                });
             }
-            
         }
         
       
@@ -33,6 +43,11 @@ const Subject = ({quiz}) => {
        
         
     return (  
+        <div>
+            <div className='container'>
+             <Toast></Toast>
+
+            </div>
        <div className="card shadow-lg text-center container m-5">
            <div className="card-body">
                 <div className='d-flex justify-content-between'>
@@ -41,13 +56,15 @@ const Subject = ({quiz}) => {
         </div>
         
              <div className='d-grid btn '>
-                 <button onClick={() => showCorrectAns(correctAnswer)}  className="btn btn-info  p-4 m-2">{options[0]}</button>
-                 <button onClick={ () => showCorrectAns(correctAnswer) } className="btn btn-info  p-4 m-2">{options[1]}</button>
-                 <button onClick={ () => showCorrectAns(correctAnswer)} className="btn btn-info  p-4 m-2">{options[2]}</button>
-                <button onClick={() => showCorrectAns(correctAnswer) } className="btn btn-info  p-4 m-2">{options[3]}</button>
+            
+                 <button onClick={() => showCorrectAns(options[0])}  className="btn btn-info  p-4 m-2">{options[0]}</button>
+                 <button onClick={ () => showCorrectAns(options[1]) } className="btn btn-info  p-4 m-2">{options[1]}</button>
+                 <button onClick={ () => showCorrectAns(options[2])} className="btn btn-info  p-4 m-2">{options[2]}</button>
+                <button onClick={() => showCorrectAns(options[3]) } className="btn btn-info  p-4 m-2">{options[3]}</button>
              </div>
-             <Toast></Toast>
+            
         </div>
+    </div>
     </div>
 
         
